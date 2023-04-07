@@ -1,8 +1,0 @@
-image: Ubuntu
-
-environment:
-  QTDIR: "$HOME/Qt/5.15.2/gcc_64/bin"
-
-build_script:
-  - cmake -DCMAKE_PREFIX_PATH=$HOME/Qt/5.15.2/gcc_64/lib/cmake CMakeLists.txt
-  - cmake --build .

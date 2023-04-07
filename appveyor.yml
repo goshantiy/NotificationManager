@@ -9,5 +9,7 @@ environment:
       - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2019
         QTDIR: "C:\\Qt\\5.15.2\\mingw81_64\\lib\\cmake"
 build_script: 
-  - cmake -DCMAKE_PREFIX_PATH=%QTDIR% CMakeLists.txt
-  - cmake --build .
+  cmd: - cmake -DCMAKE_PREFIX_PATH=%QTDIR% CMakeLists.txt
+  cmd: - cmake --build .
+  sh: - cmake -DCMAKE_PREFIX_PATH=${QTDIR} CMakeLists.txt
+  sh: - cmake --build .

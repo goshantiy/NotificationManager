@@ -12,4 +12,5 @@ build_script:
   - cmd: cmake -DCMAKE_PREFIX_PATH=%QT_DIR% CMakeLists.txt
   - cmd: cmake --build .
   - sh: cmake -DCMAKE_PREFIX_PATH=${QT_DIR} CMakeLists.txt
+  - sh: ls -la $QT_DIR
   - sh: cmake --build .

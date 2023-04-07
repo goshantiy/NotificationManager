@@ -6,7 +6,11 @@ environment:
   matrix:
     - image: Ubuntu
       QTDIR: "$HOME/Qt/5.15.2/gcc_64/bin"
-      build_script: cmake -DCMAKE_PREFIX_PATH=$HOME/Qt/5.15.2/gcc_64/lib/cmake CMakeLists.txt; cmake --build .
+      build_script: 
+        - cmake -DCMAKE_PREFIX_PATH=$HOME/Qt/5.15.2/gcc_64/lib/cmake CMakeLists.txt
+        - cmake --build .
     - image: Visual Studio 2019
       QTDIR: "C:\\Qt\\5.15.2\\mingw81_64\\"
-      build_script: cmake -DCMAKE_PREFIX_PATH=C:\\Qt\\5.15.2\\mingw81_64\\lib\\cmake CMakeLists.txt; cmake --build .
+      build_script: 
+        - cmake -DCMAKE_PREFIX_PATH=C:\\Qt\\5.15.2\\mingw81_64\\lib\\cmake CMakeLists.txt
+        - cmake --build .

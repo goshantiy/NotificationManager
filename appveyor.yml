@@ -5,7 +5,7 @@ image:
 environment:
   matrix:
     - APPVEYOR_BUILD_WORKER_IMAGE: Ubuntu
-      QT_DIR: "$HOME/Qt/5.15.2/gcc_64/lib/cmake"
+      QT_DIR: $HOME/Qt/5.15.2/gcc_64/lib/cmake
     - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2019
       QT_DIR: "C:\\Qt\\5.15.2\\mingw81_64\\lib\\cmake"
 build_script: 

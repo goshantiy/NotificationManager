@@ -4,12 +4,12 @@ image:
   - Ubuntu
 environment:
   matrix:
-      - APPVEYOR_BUILD_WORKER_IMAGE: Ubuntu
-      - QTDIR: "$HOME/Qt/5.15.2/gcc_64/lib/cmake"
-      - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2019
-      - QTDIR: "C:\\Qt\\5.15.2\\mingw81_64\\lib\\cmake"
+    - APPVEYOR_BUILD_WORKER_IMAGE: Ubuntu
+      QTDIR: "$HOME/Qt/5.15.2/gcc_64/lib/cmake"
+    - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2019
+      QTDIR: "C:\\Qt\\5.15.2\\mingw81_64\\lib\\cmake"
 build_script: 
-- cmd: cmake -DCMAKE_PREFIX_PATH=%QTDIR% CMakeLists.txt
-- cmd: cmake --build .
-- sh: cmake -DCMAKE_PREFIX_PATH=${QTDIR} CMakeLists.txt
-- sh: cmake --build .
+  - cmd: cmake -DCMAKE_PREFIX_PATH=%QTDIR% CMakeLists.txt
+  - cmd: cmake --build .
+  - sh: cmake -DCMAKE_PREFIX_PATH=$QTDIR CMakeLists.txt
+  - sh: cmake --build .

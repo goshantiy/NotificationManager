@@ -5,5 +5,6 @@ image:
 build_script: 
   - cmd: cmake -DCMAKE_PREFIX_PATH=C:\\Qt\\5.15.2\\mingw81_64\\lib\\cmake CMakeLists.txt
   - cmd: cmake --build .
+  - sh: ls -la $HOME
   - sh: cmake -DCMAKE_PREFIX_PATH=$HOME/Qt/5.15.2/gcc_64/lib/cmake CMakeLists.txt
-  - sh: cmake --build .
+  - sh: cmake --build .в
